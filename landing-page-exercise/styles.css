@@ -4,6 +4,7 @@
   --light-blue: #3882F6;
   --light-gray: #E5E7EB;
   --dark-gray: #555555;
+  --horizontal-padding: 300px;
 }
 
 * {
@@ -19,7 +20,7 @@ html {
 header {
   background-color: var(--dark-blue);
   color: var(--white);
-  padding: 20px 300px;
+  padding: 20px var(--horizontal-padding);
 }
 
 ul {
@@ -95,6 +96,10 @@ nav ul {
 }
 
 /* section 1 */
+section {
+  margin: 80px 0;
+}
+
 .perks ul {
  display: flex;
  justify-content: center;
@@ -106,7 +111,7 @@ nav ul {
   text-align: center;
   font-size: 36px;
   color: var(--dark-blue);
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 
 .perk-item p {
@@ -120,4 +125,24 @@ nav ul {
   height: 150px;
   border: 3px solid var(--light-blue);
   border-radius: 8px;
+}
+
+section.testimonial {
+  background-color: var(--light-gray);
+  padding: 80px var(--horizontal-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-quote {
+  font-size: 36px;
+  color: var(--dark-blue);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial-author {
+  align-self: flex-end;
+  font-weight: 900;
+  font-size: 20px;
 }
